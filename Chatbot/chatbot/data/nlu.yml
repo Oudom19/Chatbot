@@ -408,6 +408,9 @@ nlu:
 
 - intent: ask_product_by_name
   examples: |
+    - I want [MacBook Air](model_name)
+    - Send me [MacBook Air](model_name)
+    - Give me [MacBook Air](model_name)
     - Details of product [MacBook Air](model_name)
     - Product details [MacBook Air](model_name)
     - Details of laptop [MacBook Air](model_name)
@@ -485,6 +488,11 @@ nlu:
 
 - intent: ask_product_by_common_name
   examples: |
+    - [MacBook](common_name)
+    - [MacBook](common_name) please
+    - I want [MacBook](common_name)
+    - Send me [MacBook](common_name)
+    - Give me [MacBook](common_name)
     - Any [ROG](common_name)?
     - Details of product [MacBook](common_name)
     - Product details [MacBook](common_name)
