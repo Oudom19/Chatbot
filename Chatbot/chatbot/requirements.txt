@@ -1,0 +1,10 @@
+# Core Rasa
+rasa==3.6.21
+
+# Channels/connectors
+fbmessenger==6.0.0
+aiogram==2.15  # For Telegram
+
+# Utilities (if actually needed)
+boto3==1.37.5  # For AWS
+fastapi==0.115.11  # If used for custom endpoints
