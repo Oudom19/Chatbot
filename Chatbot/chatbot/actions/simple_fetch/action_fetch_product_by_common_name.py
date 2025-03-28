@@ -89,7 +89,7 @@ class ActionFetchProduct(Action):
 
                 if products:
                     # Track shown product IDs
-                    shown_ids = [str(product['id']) for product in products]
+                    shown_cm_ids = [str(product['id']) for product in products]
 
                     if len(products) == 1:
                         intro = random.choice(intros)
@@ -123,7 +123,7 @@ class ActionFetchProduct(Action):
                     cursor.close()
                     connection.close()
                     dispatcher.utter_message(text="Would you like to see more products?")
-                    return [SlotSet("shown_product_ids", shown_ids)]
+                    return [SlotSet("shown_product_cm_ids", shown_cm_ids)]
 
         dispatcher.utter_message(
             text="❌ Unfortunately, I couldn't find any products matching your specifications. Please refine your search criteria or contact our support team for further assistance."
