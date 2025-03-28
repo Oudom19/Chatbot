@@ -212,7 +212,7 @@ entities:
   - max_price
   - min_price
   - shown_product_ids
-
+  - shown_product_cm_ids
 slots:
   model_name:
     type: text
@@ -265,6 +265,11 @@ slots:
       - type: from_entity
         entity: min_price
   shown_product_ids:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+  shown_product_cm_ids:
     type: list
     influence_conversation: false
     mappings:
