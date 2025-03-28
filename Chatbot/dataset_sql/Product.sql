@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2025 at 05:14 AM
+-- Generation Time: Mar 28, 2025 at 05:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -152,63 +152,64 @@ CREATE TABLE `products` (
   `gpu` varchar(255) DEFAULT NULL,
   `os_id` int(11) DEFAULT NULL,
   `weight` varchar(20) DEFAULT NULL,
-  `price` float DEFAULT NULL
+  `price` float DEFAULT NULL,
+  `common_name` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `manufacturer_id`, `model_name`, `category`, `screen_size`, `screen`, `cpu`, `ram`, `storage`, `gpu`, `os_id`, `weight`, `price`) VALUES
-(1, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.3GHz', '8GB', '128GB SSD', 'Intel Iris Plus Graphics 640', 1, '1.37kg', 1339.69),
-(2, 2, 'Macbook Air', 'Notebook', '13.3\"', '1440x900', 'Intel Core i5 1.8GHz', '8GB', '128GB Flash Storage', 'Intel HD Graphics 6000', 1, '1.34kg', 998.94),
-(3, 6, '250 G6', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '8GB', '256GB SSD', 'Intel HD Graphics 620', 2, '1.86kg', 575),
-(4, 2, 'MacBook Pro', 'Notebook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.7GHz', '16GB', '512GB SSD', 'AMD Radeon Pro 455', 1, '1.83kg', 2837.45),
-(5, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i7 2.7GHz', '8GB', '256GB SSD', 'Intel Iris Plus Graphics 650', 1, '1.37kg', 1803.6),
-(6, 1, 'Aspire 3', 'Notebook', '15.6\"', '1366x768', 'AMD A9-Series 9420 3GHz', '4GB', '500GB HDD', 'AMD Radeon R5', 3, '2.1kg', 400),
-(7, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.2GHz', '16GB', '256GB Flash Storage', 'Intel Iris Pro Graphics', 4, '2.04kg', 2139.97),
-(8, 2, 'Macbook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.8GHz', '8GB', '256GB Flash Storage', 'Intel HD Graphics 6000', 1, '1.34kg', 1158.7),
-(9, 3, 'ZenBook UX430UN', 'Ultrabook', '14.0\"', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '16GB', '512GB SSD', 'Nvidia GeForce MX150', 3, '1.3kg', 1495),
-(10, 1, 'Swift 3', 'Ultrabook', '14.0\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '1.6kg', 770),
-(11, 6, '250 G6', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '500GB HDD', 'Intel HD Graphics 620', 2, '1.86kg', 393.9),
-(12, 6, '250 G6', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', 2, '1.86kg', 344.99),
-(13, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.8GHz', '16GB', '256GB SSD', 'AMD Radeon Pro 555', 1, '1.83kg', 2439.97),
-(14, 5, 'Inspiron 3567', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.2kg', 498.9),
-(15, 2, 'MacBook 12\"', 'Ultrabook', '12.0\"', 'IPS Panel Retina Display 2304x1440', 'Intel Core M m3 1.2GHz', '8GB', '256GB SSD', 'Intel HD Graphics 615', 1, '0.92kg', 1262.4),
-(16, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.3GHz', '8GB', '256GB SSD', 'Intel Iris Plus Graphics 640', 1, '1.37kg', 1518.55),
-(17, 5, 'Inspiron 3567', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 7500U 2.7GHz', '8GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.2kg', 745),
-(18, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.9GHz', '16GB', '512GB SSD', 'AMD Radeon Pro 560', 1, '1.83kg', 2858),
-(19, 8, 'IdeaPad 320-15IKB', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 7100U 2.4GHz', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', 2, '2.2kg', 499),
-(20, 5, 'XPS 13', 'Ultrabook', '13.3\"', 'IPS Panel Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '128GB SSD', 'Intel UHD Graphics 620', 3, '1.22kg', 979),
-(21, 3, 'Vivobook E200HA', 'Netbook', '11.6\"', '1366x768', 'Intel Atom x5-Z8350 1.44GHz', '2GB', '32GB Flash Storage', 'Intel HD Graphics 400', 3, '0.98kg', 191.9),
-(22, 8, 'Legion Y520-15IKBN', 'Gaming', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 7300HQ 2.5GHz', '8GB', '128GB SSD + 1TB HDD', 'Nvidia GeForce GTX 1050', 3, '2.5kg', 999),
-(23, 6, '255 G6', 'Notebook', '15.6\"', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', 2, '1.86kg', 258),
-(24, 5, 'Inspiron 5379', '2 in 1 Convertible', '13.3\"', 'Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '1.62kg', 819),
-(25, 6, '15-BS101nv', 'Ultrabook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Intel HD Graphics 620', 3, '1.91kg', 659),
-(26, 5, 'Inspiron 3567', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 520', 3, '2.3kg', 418.64),
-(27, 2, 'MacBook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.6GHz', '8GB', '128GB Flash Storage', 'Intel HD Graphics 6000', 4, '1.35kg', 1099),
-(28, 5, 'Inspiron 5570', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'AMD Radeon 530', 3, '2.2kg', 800),
-(29, 5, 'Latitude 5590', 'Ultrabook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 8650U 1.9GHz', '8GB', '256GB SSD + 256GB SSD', 'Intel UHD Graphics 620', 3, '1.88kg', 1298),
-(30, 6, 'ProBook 470', 'Notebook', '17.3\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '1TB HDD', 'Nvidia GeForce 930MX', 3, '2.5kg', 896),
-(31, 4, 'LapBook 15.6\"', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Atom x5-Z8300 1.44GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics', 3, '1.89kg', 244.99),
-(32, 3, 'E402WA-GA010T', 'Notebook', '14.0\"', '1366x768', 'AMD E-Series E2-6110 1.5GHz', '2GB', '32GB Flash Storage', 'AMD Radeon R2', 3, '1.65kg', 199),
-(33, 5, '17-ak001nv', 'Notebook', '17.3\"', 'Full HD 1920x1080', 'AMD A6-Series 9220 2.5GHz', '4GB', '500GB HDD', 'AMD Radeon 530', 3, '2.71kg', 439),
-(34, 5, 'XPS 13', 'Ultrabook', '13.3\"', 'Touchscreen / Quad HD+ 3200x1800', 'Intel Core i7 8550U 1.8GHz', '16GB', '512GB SSD', 'Intel UHD Graphics 620', 3, '1.2kg', 1869),
-(35, 2, 'MacBook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.6GHz', '8GB', '256GB Flash Storage', 'Intel HD Graphics 6000', 4, '1.35kg', 998),
-(36, 8, 'IdeaPad 120S-14IAP', 'Notebook', '14.0\"', '1366x768', 'Intel Celeron Dual Core N3350 1.1GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics 500', 3, '1.44kg', 249),
-(37, 1, 'Aspire 3', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 7130U 2.7GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '2.1kg', 367),
-(38, 5, 'Inspiron 5770', 'Notebook', '17.3\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '128GB SSD + 1TB HDD', 'AMD Radeon 530', 3, '2.8kg', 979),
-(39, 6, '250 G6', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '1.86kg', 488.69),
-(40, 6, 'ProBook 450', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Nvidia GeForce 930MX', 3, '2.1kg', 879),
-(41, 3, 'X540UA-DM186', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '2kg', 389),
-(42, 5, 'Inspiron 7577', 'Gaming', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 7700HQ 2.8GHz', '16GB', '256GB SSD + 1TB HDD', 'Nvidia GeForce GTX 1060', 3, '2.65kg', 1499),
-(43, 3, 'X542UQ-GO005', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', 5, '2.3kg', 522.99),
-(44, 1, 'Aspire A515-51G', 'Notebook', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '4GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '2.2kg', 682),
-(45, 5, 'Inspiron 7773', '2 in 1 Convertible', '17.3\"', 'Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '12GB', '1TB HDD', 'Nvidia GeForce 150MX', 3, '2.77kg', 999),
-(46, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.0GHz', '8GB', '256GB SSD', 'Intel Iris Graphics 540', 1, '1.37kg', 1419),
-(47, 8, 'IdeaPad 320-15ISK', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '128GB SSD', 'Intel HD Graphics 520', 2, '2.2kg', 369),
-(48, 3, 'Rog Strix', 'Gaming', '17.3\"', 'Full HD 1920x1080', 'AMD Ryzen 1700 3GHz', '8GB', '256GB SSD + 1TB HDD', 'AMD Radeon RX 580', 3, '3.2kg', 1299),
-(49, 5, 'Inspiron 3567', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.3kg', 639);
+INSERT INTO `products` (`id`, `manufacturer_id`, `model_name`, `category`, `screen_size`, `screen`, `cpu`, `ram`, `storage`, `gpu`, `os_id`, `weight`, `price`, `common_name`) VALUES
+(1, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.3GHz', '8GB', '128GB SSD', 'Intel Iris Plus Graphics 640', 1, '1.37kg', 1339.69, 'MacBook'),
+(2, 2, 'Macbook Air', 'Notebook', '13.3\"', '1440x900', 'Intel Core i5 1.8GHz', '8GB', '128GB Flash Storage', 'Intel HD Graphics 6000', 1, '1.34kg', 998.94, 'MacBook'),
+(3, 6, '250 G6', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '8GB', '256GB SSD', 'Intel HD Graphics 620', 2, '1.86kg', 575, NULL),
+(4, 2, 'MacBook Pro', 'Notebook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.7GHz', '16GB', '512GB SSD', 'AMD Radeon Pro 455', 1, '1.83kg', 2837.45, 'MacBook'),
+(5, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i7 2.7GHz', '8GB', '256GB SSD', 'Intel Iris Plus Graphics 650', 1, '1.37kg', 1803.6, 'MacBook'),
+(6, 1, 'Aspire 3', 'Notebook', '15.6\"', '1366x768', 'AMD A9-Series 9420 3GHz', '4GB', '500GB HDD', 'AMD Radeon R5', 3, '2.1kg', 400, 'Aspire'),
+(7, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.2GHz', '16GB', '256GB Flash Storage', 'Intel Iris Pro Graphics', 4, '2.04kg', 2139.97, 'MacBook'),
+(8, 2, 'Macbook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.8GHz', '8GB', '256GB Flash Storage', 'Intel HD Graphics 6000', 1, '1.34kg', 1158.7, 'MacBook'),
+(9, 3, 'ZenBook UX430UN', 'Ultrabook', '14.0\"', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '16GB', '512GB SSD', 'Nvidia GeForce MX150', 3, '1.3kg', 1495, 'Zenbook'),
+(10, 1, 'Swift 3', 'Ultrabook', '14.0\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '1.6kg', 770, 'Swift'),
+(11, 6, '250 G6', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '500GB HDD', 'Intel HD Graphics 620', 2, '1.86kg', 393.9, NULL),
+(12, 6, '250 G6', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '500GB HDD', 'Intel HD Graphics 520', 2, '1.86kg', 344.99, NULL),
+(13, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.8GHz', '16GB', '256GB SSD', 'AMD Radeon Pro 555', 1, '1.83kg', 2439.97, 'MacBook'),
+(14, 5, 'Inspiron 3567', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.2kg', 498.9, 'Inspiron'),
+(15, 2, 'MacBook 12\"', 'Ultrabook', '12.0\"', 'IPS Panel Retina Display 2304x1440', 'Intel Core M m3 1.2GHz', '8GB', '256GB SSD', 'Intel HD Graphics 615', 1, '0.92kg', 1262.4, 'MacBook'),
+(16, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.3GHz', '8GB', '256GB SSD', 'Intel Iris Plus Graphics 640', 1, '1.37kg', 1518.55, 'MacBook'),
+(17, 5, 'Inspiron 3567Aspire', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 7500U 2.7GHz', '8GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.2kg', 745, 'Inspiron'),
+(18, 2, 'MacBook Pro', 'Ultrabook', '15.4\"', 'IPS Panel Retina Display 2880x1800', 'Intel Core i7 2.9GHz', '16GB', '512GB SSD', 'AMD Radeon Pro 560', 1, '1.83kg', 2858, 'MacBook'),
+(19, 8, 'IdeaPad 320-15IKB', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 7100U 2.4GHz', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', 2, '2.2kg', 499, 'IdeaPad'),
+(20, 5, 'XPS 13', 'Ultrabook', '13.3\"', 'IPS Panel Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '128GB SSD', 'Intel UHD Graphics 620', 3, '1.22kg', 979, 'XPS'),
+(21, 3, 'Vivobook E200HA', 'Netbook', '11.6\"', '1366x768', 'Intel Atom x5-Z8350 1.44GHz', '2GB', '32GB Flash Storage', 'Intel HD Graphics 400', 3, '0.98kg', 191.9, 'Vivobook'),
+(22, 8, 'Legion Y520-15IKBN', 'Gaming', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 7300HQ 2.5GHz', '8GB', '128GB SSD + 1TB HDD', 'Nvidia GeForce GTX 1050', 3, '2.5kg', 999, 'Legion'),
+(23, 6, '255 G6', 'Notebook', '15.6\"', '1366x768', 'AMD E-Series E2-9000e 1.5GHz', '4GB', '500GB HDD', 'AMD Radeon R2', 2, '1.86kg', 258, NULL),
+(24, 5, 'Inspiron 5379', '2 in 1 Convertible', '13.3\"', 'Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '1.62kg', 819, 'Inspiron'),
+(25, 6, '15-BS101nv', 'Ultrabook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 8550U 1.8GHz', '8GB', '256GB SSD', 'Intel HD Graphics 620', 3, '1.91kg', 659, NULL),
+(26, 5, 'Inspiron 3567', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 520', 3, '2.3kg', 418.64, 'Inspiron'),
+(27, 2, 'MacBook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.6GHz', '8GB', '128GB Flash Storage', 'Intel HD Graphics 6000', 4, '1.35kg', 1099, 'MacBook'),
+(28, 5, 'Inspiron 5570', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'AMD Radeon 530', 3, '2.2kg', 800, 'Inspiron'),
+(29, 5, 'Latitude 5590', 'Ultrabook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i7 8650U 1.9GHz', '8GB', '256GB SSD + 256GB SSD', 'Intel UHD Graphics 620', 3, '1.88kg', 1298, 'Latitude'),
+(30, 6, 'ProBook 470', 'Notebook', '17.3\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '1TB HDD', 'Nvidia GeForce 930MX', 3, '2.5kg', 896, 'ProBook'),
+(31, 4, 'LapBook 15.6\"', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Atom x5-Z8300 1.44GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics', 3, '1.89kg', 244.99, NULL),
+(32, 3, 'E402WA-GA010T', 'Notebook', '14.0\"', '1366x768', 'AMD E-Series E2-6110 1.5GHz', '2GB', '32GB Flash Storage', 'AMD Radeon R2', 3, '1.65kg', 199, NULL),
+(33, 5, '17-ak001nv', 'Notebook', '17.3\"', 'Full HD 1920x1080', 'AMD A6-Series 9220 2.5GHz', '4GB', '500GB HDD', 'AMD Radeon 530', 3, '2.71kg', 439, NULL),
+(34, 5, 'XPS 13', 'Ultrabook', '13.3\"', 'Touchscreen / Quad HD+ 3200x1800', 'Intel Core i7 8550U 1.8GHz', '16GB', '512GB SSD', 'Intel UHD Graphics 620', 3, '1.2kg', 1869, 'XPS'),
+(35, 2, 'MacBook Air', 'Ultrabook', '13.3\"', '1440x900', 'Intel Core i5 1.6GHz', '8GB', '256GB Flash Storage', 'Intel HD Graphics 6000', 4, '1.35kg', 998, 'MacBook'),
+(36, 8, 'IdeaPad 120S-14IAP', 'Notebook', '14.0\"', '1366x768', 'Intel Celeron Dual Core N3350 1.1GHz', '4GB', '64GB Flash Storage', 'Intel HD Graphics 500', 3, '1.44kg', 249, 'IdeaPad'),
+(37, 1, 'Aspire 3', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 7130U 2.7GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '2.1kg', 367, 'Aspire'),
+(38, 5, 'Inspiron 5770', 'Notebook', '17.3\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '128GB SSD + 1TB HDD', 'AMD Radeon 530', 3, '2.8kg', 979, 'Inspiron'),
+(39, 6, '250 G6', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '1.86kg', 488.69, NULL),
+(40, 6, 'ProBook 450', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '8GB', '256GB SSD', 'Nvidia GeForce 930MX', 3, '2.1kg', 879, 'ProBook'),
+(41, 3, 'X540UA-DM186', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i3 6006U 2GHz', '4GB', '1TB HDD', 'Intel HD Graphics 620', 5, '2kg', 389, NULL),
+(42, 5, 'Inspiron 7577', 'Gaming', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i7 7700HQ 2.8GHz', '16GB', '256GB SSD + 1TB HDD', 'Nvidia GeForce GTX 1060', 3, '2.65kg', 1499, 'Inspiron'),
+(43, 3, 'X542UQ-GO005', 'Notebook', '15.6\"', '1366x768', 'Intel Core i5 7200U 2.5GHz', '8GB', '1TB HDD', 'Nvidia GeForce 940MX', 5, '2.3kg', 522.99, NULL),
+(44, 1, 'Aspire A515-51G', 'Notebook', '15.6\"', 'IPS Panel Full HD 1920x1080', 'Intel Core i5 8250U 1.6GHz', '4GB', '256GB SSD', 'Intel UHD Graphics 620', 3, '2.2kg', 682, 'Aspire'),
+(45, 5, 'Inspiron 7773', '2 in 1 Convertible', '17.3\"', 'Full HD / Touchscreen 1920x1080', 'Intel Core i5 8250U 1.6GHz', '12GB', '1TB HDD', 'Nvidia GeForce 150MX', 3, '2.77kg', 999, 'Inspiron'),
+(46, 2, 'MacBook Pro', 'Ultrabook', '13.3\"', 'IPS Panel Retina Display 2560x1600', 'Intel Core i5 2.0GHz', '8GB', '256GB SSD', 'Intel Iris Graphics 540', 1, '1.37kg', 1419, 'MacBook'),
+(47, 8, 'IdeaPad 320-15ISK', 'Notebook', '15.6\"', '1366x768', 'Intel Core i3 6006U 2GHz', '4GB', '128GB SSD', 'Intel HD Graphics 520', 2, '2.2kg', 369, 'IdeaPad'),
+(48, 3, 'Rog Strix', 'Gaming', '17.3\"', 'Full HD 1920x1080', 'AMD Ryzen 1700 3GHz', '8GB', '256GB SSD + 1TB HDD', 'AMD Radeon RX 580', 3, '3.2kg', 1299, 'Rog'),
+(49, 5, 'Inspiron 3567', 'Notebook', '15.6\"', 'Full HD 1920x1080', 'Intel Core i5 7200U 2.5GHz', '4GB', '256GB SSD', 'AMD Radeon R5 M430', 3, '2.3kg', 639, 'Inspiron');
 
 --
 -- Indexes for dumped tables
